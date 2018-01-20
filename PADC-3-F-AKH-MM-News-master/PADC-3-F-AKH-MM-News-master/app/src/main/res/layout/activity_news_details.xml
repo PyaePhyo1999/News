@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            app:contentScrim="@color/primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_news_details-images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true" />
+
+            <!--
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blackpanther_new_poster"
+                android:fitsSystemWindows="true"/>
+                -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_eleven_logo"
+                    android:layout_width="@dimen/publication_logo_width"
+                    android:layout_height="@dimen/publication_logo_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="48dp"
+                    android:layout_marginLeft="@dimen/publication_distance"
+                    android:scaleType="center"
+                    android:src="@drawable/img_dummy_publication_eleven" />
+
+                <TextView
+                    android:id="@+id/tv_eleven_name"
+                    style="@style/white_text_black_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv_eleven_logo"
+                    android:layout_marginLeft="@dimen/publication_distance"
+                    android:layout_toEndOf="@id/iv_eleven_logo"
+                    android:text="Eleven Media"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_eleven_date"
+                    style="@style/white_text_black_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_eleven_name"
+                    android:layout_below="@id/tv_eleven_name"
+                    android:layout_marginTop="8dp"
+                    android:text="Posted at : Dec 09 - 2:15PM "
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/news_details_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_favorite_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/publication_distance"
+        android:padding="8dp"
+        android:src="@drawable/ic_favorite_border_white_24dp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|right" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_news_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/rl_news_details_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <net.aungpyaephyo.mmtextview.components.MMTextView
+                android:id="@+id/tv_news_black_panther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/publication_distance"
+                android:layout_marginRight="@dimen/publication_distance"
+                android:layout_marginTop="8dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/dummy_news_black_panther"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

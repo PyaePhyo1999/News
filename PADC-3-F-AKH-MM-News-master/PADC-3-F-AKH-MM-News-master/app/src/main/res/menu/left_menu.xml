@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/menu_item_all_news"
+        android:id="@+id/menu_all_news"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:checked="true"
+        >
+    </item>
+
+    <item  android:title="@string/news_by_category_title"
+        android:id="@+id/menu_news_by_category"
+        android:icon="@drawable/ic_reorder_black_24dp"
+        >
+
+    </item>
+
+
+</menu>

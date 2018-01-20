@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="headlines"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/primary"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="12dp"
+        android:drawableLeft="@drawable/ic_watch_later_black_24dp"
+        android:text="11:06" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_headline"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primary"
+        android:backgroundTint="@color/primary" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_main_international_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_international_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_headline"
+            android:layout_marginTop="12dp">
+
+
+            <TextView
+                android:id="@+id/tv_international_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/posted_by"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_international_news"
+                android:layout_below="@id/tv_international_news"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_watch_later_black_24dp"
+                android:text="1h" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_international_news"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_bookmark_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_international_news_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_post_time"
+                android:layout_marginTop="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_international_news" />
+            <View
+                android:id="@+id/view_five"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/iv_international_news_main"
+                android:background="@color/primary"
+                android:backgroundTint="@color/primary" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_news_from_public"
+                android:layout_below="@id/view_five"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_international_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cv_main_international_news"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:weightSum="2">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/view_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/primary"
+                android:backgroundTint="@color/primary" />
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cv_international_news_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@id/view_one"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_international_news_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_international_news_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/posted_by"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_post_time_for_news_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/tv_international_news_one"
+                        android:layout_below="@id/tv_international_news_one"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_watch_later_black_24dp"
+                        android:text="1h" />
+
+
+
+                    <ImageView
+                        android:id="@+id/iv_international_news_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_post_time_for_news_one"
+                        android:layout_marginTop="4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_international_news" />
+
+
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="1">
+           <View
+               android:id="@+id/view_two"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_marginLeft="12dp"
+               android:layout_marginRight="12dp"
+               android:background="@color/primary"
+               android:backgroundTint="@color/primary" />
+           <android.support.v7.widget.CardView
+               android:id="@+id/cv_international_news_two"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:layout_below="@id/view_two"
+               android:layout_marginLeft="12dp"
+               android:layout_marginRight="12dp"
+               app:cardElevation="4dp">
+
+               <RelativeLayout
+                   android:id="@+id/rl_international_news_two"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/tv_headline"
+                   android:layout_marginTop="12dp">
+
+                   <TextView
+                       android:id="@+id/tv_international_news_two"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_marginLeft="8dp"
+                       android:layout_marginTop="4dp"
+                       android:text="@string/posted_by"
+                       android:textSize="18sp" />
+
+                   <TextView
+                       android:id="@+id/tv_post_time_two"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignLeft="@id/tv_international_news_two"
+                       android:layout_below="@id/tv_international_news_two"
+                       android:layout_marginTop="8dp"
+                       android:drawableLeft="@drawable/ic_watch_later_black_24dp"
+                       android:text="1h" />
+
+
+
+                   <ImageView
+                       android:id="@+id/iv_international_news_two"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/tv_post_time_two"
+                       android:layout_marginTop="4dp"
+                       android:scaleType="centerCrop"
+                       android:src="@drawable/img_international_news" />
+
+
+
+
+               </RelativeLayout>
+
+
+
+
+           </android.support.v7.widget.CardView>
+
+
+
+
+
+       </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_four"
+        android:layout_below="@id/ll_international_news"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/primary"
+        android:backgroundTint="@color/primary" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv_main_international_news_text_one"
+        android:layout_below="@id/view_four"
+        app:cardElevation="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_international_news_text_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/posted_by"
+            android:textSize="18sp" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_view_more"
+        android:text="View More"
+        android:textSize="20sp"
+        android:textColor="@color/primary"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+        android:layout_below="@id/cv_main_international_news_text_one"/>
+
+</RelativeLayout>
